@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  @apply m-0 p-0 box-border font-sans;
+body {
+  @apply m-0 p-0 box-border font-sans bg-gray-700;
+}
+
+.default-gradient { /* from-purple-400 to-pink-600 */
+  @apply font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500;
+}
+
+*::selection {
+  @apply bg-transparent;
 }
 
