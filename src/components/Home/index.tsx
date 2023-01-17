@@ -16,7 +16,7 @@ export function Home() {
           className="mt-28 flex flex-col md:flex-row items-center gap-10 ease-in-out md:h-[50vh]">
           <Photo/>
           <p 
-            className="font-bold text-gray-200 flex flex-col text-left md:w-[650px]">
+            className="font-bold text-gray-200 flex flex-col md:text-left w-[80%] md:w-[650px]">
               <span className="text-3xl default-gradient w-[180px] mb-2">
                 Luiz Leme
               </span>
@@ -55,7 +55,7 @@ export function Home() {
           </a>
 
           <a
-            className="p-1 bg-gradient-to-r from-yellow-400 to-pink-600 w-full md:w-[290px] rounded-md cursor-pointer flex"
+            className="p-1 bg-gradient-to-r from-yellow-400 to-pink-600 w-full md:w-[290px] rounded-md cursor-pointer flex mb-10 md:mb-0"
             target={"_blank"}
             href="https://instagram.com/luizgcl"
           >
