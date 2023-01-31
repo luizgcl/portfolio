@@ -4,10 +4,13 @@ module.exports = {
   important: true,
   theme: {
     extend: {
-
+      screens: {
+        'tall': { 'raw': '(max-height : 790px)' },
+        'tall-xs': { 'raw': '(max-height : 667px)' },
+      },
     },
     fontFamily: {
-      'sans': ['Poppins', 'sans-serif']
+      'sans': ['Poppins', 'sans-serif'],
     },
   },
   plugins: [],

@@ -6,8 +6,6 @@ const Title = w.h1(`text-2xl font-black text-gray-800`)
 
 export function HomePage() {
   return (<>
-    <Main>
       <Home/>
-    </Main>
   </>)
 }

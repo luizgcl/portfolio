@@ -163,7 +163,7 @@ export function Home() {
       <Section className="justify-between">
         <a
           href="#home"
-          className="link-button mt-20 mb-10 md:mb-20"
+          className="link-button mt-20 mb-10 md:mb-20 tall:mb-10 tall:mt-10"
         >
           <ArrowUp
             size={32}
@@ -172,7 +172,7 @@ export function Home() {
         </a>
         <Container id="about-me">
           <div
-            className="flex flex-col md:flex-row gap-5 mx-5 md:mx-24"
+            className="flex flex-col md:flex-row gap-5 mx-5 md:mx-24 tall-xs:h-2/3"
           >
             <span className="d-flex flex-col float-left w-full md:w-1/2">
               <h2 className="animation-start text-gray-100 text-3xl font-bold">Sobre mim</h2>
@@ -189,7 +189,7 @@ export function Home() {
             </span>
             <span className="d-flex flex-col float-right w-full md:w-1/2">
               <h2 className="animation-start text-gray-100 text-3xl font-bold">Conhecimento</h2>
-              <p className="flex flex-col gap-2 mt-6 overflow-auto max-h-[31.25rem] scroll-list">
+              <p className="flex flex-col gap-2 mt-6 overflow-auto max-h-[31.25rem] tall:max-h-[25rem] scroll-list">
                 {
                   skills.map(skill => (
                     <Skill
@@ -206,7 +206,7 @@ export function Home() {
           </div>
         </Container>
         <footer 
-            className="glass w-full flex justify-center items-center gap-2 p-4 mt-10 md:mt-20 text-gray-100">
+            className="glass w-full flex justify-center items-center gap-2 p-4 mt-10 md:mt-20 text-gray-100 tall:mt-2">
             <h2 className="default-gradient text-2xl">{'<luizgcl/>'}</h2>
             <span>
               &copy; 
