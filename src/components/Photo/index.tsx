@@ -1,13 +1,14 @@
-import React from "react";
+import React, {PropsWithChildren } from "react";
 
-export function Photo() {
+export function Photo(props: {className: string}) {
   return (
     <div
-      className="p-1 w-56 border-transparent bg-clip-border bg-gradient-to-br from-yellow-400 to-pink-500 rounded-full"
+      {...props}
     >
       <img
-        src='https://github.com/luizgcl.png'
-        className="rounded-full"
+        src='src/assets/luizgcl.png'
+        alt="Autor do site"
+        className="rounded-lg my-photo"
       />
     </div>
   )

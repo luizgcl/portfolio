@@ -1,72 +1,219 @@
 import React from "react";
-import { Container, Section } from "../../@global/styles";
-import { GithubLogo, LinkedinLogo, InstagramLogo } from 'phosphor-react';
+import { Container, Main, Navbar, Section } from "../../@global/styles";
+import { GithubLogo, LinkedinLogo, InstagramLogo, ArrowDown, ArrowUp, AngularLogo, StackOverflowLogo } from 'phosphor-react';
 import { Photo } from "../Photo";
+import { ReactIcon } from "../../@global/Icons/ReactIcon";
+import { JiraIcon } from "../../@global/Icons/JiraIcon";
+import { NodeIcon } from "../../@global/Icons/NodeIcon";
+import { Skill } from "../Skill";
+import { MongoDbIcon } from "../../@global/Icons/MongoDbIcon";
+import { MySqlIcon } from "../../@global/Icons/MySQLIcon";
+import { RedisIcon } from "../../@global/Icons/RedisIcon";
+import { JavaIcon } from "../../@global/Icons/JavaIcon";
 
 export function Home() {
+
+  const skills = Array.from([
+    {
+      name: "Jira",
+      progress: 80,
+      logo: <JiraIcon
+        size={64}
+        children
+      />
+    },
+    {
+      name: "Angular",
+      progress: 70,
+      logo: <AngularLogo 
+        size={64}
+        children
+      />
+    },
+    {
+      name: "React",
+      progress: 50,
+      logo: <ReactIcon
+        size={64}
+        children
+      />
+    },
+    {
+      name: "NodeJS",
+      progress: 65,
+      logo: <NodeIcon
+        size={64}
+        children
+      />
+    },
+    {
+      name: "Java",
+      progress: 75,
+      logo: <JavaIcon
+        size={64}
+        children
+      />
+    },
+    {
+      name: "MongoDB",
+      progress: 55,
+      logo: <MongoDbIcon
+        size={64}
+        children
+      />
+    },
+    {
+      name: "MySQL",
+      progress: 65,
+      logo: <MySqlIcon
+        size={64}
+        children
+      />
+    },
+    {
+      name: "Redis",
+      progress: 35,
+      logo: <RedisIcon
+        size={64}
+        children
+      />
+    },
+  ])
+
+  const birthTime = new Date(Date.now()).getTime() - new Date(2002, 8, 10).getTime();
+  const age = Math.floor(birthTime / 1000 / 60 / 60 / 24 / 365)
+
   return (
-    <Section>
-      <Container>
-        <h1
-          className="default-gradient text-5xl h-20 mt-2"
-        >
-          {'<luizgcl/>'}
-        </h1>
-        <div 
-          className="mt-28 flex flex-col md:flex-row items-center gap-10 ease-in-out md:h-[50vh]">
-          <Photo/>
-          <p 
-            className="font-bold text-gray-200 flex flex-col md:text-left w-[80%] md:w-[650px]">
-              <span className="text-3xl default-gradient w-[180px] mb-2">
-                Luiz Leme
-              </span>
-              <span className="text-md md:text-xl">
-                20 anos, atualmente estou cursando o 2º período de Sistemas para Internet pela Fatec de Jales.
-              </span>
-              <span className="text-md md:text-xl">
-                Desenvolvedor Full Stack, atualmente trabalho na empresa Madelife, onde utilizo as técnologias Angular e Laravel para o desenvolvimento.<br/>
-                Nas horas vagas estudo Node, Elixir, React e ReactNative.
-              </span>
-          </p>
-        </div>
-        <footer
-          className="mt-12 md:mt-28 flex flex-1 flex-col md:flex-row gap-4 md:bottom-10 md:fixed"
-        >
-          <a
-            className="p-1 bg-gradient-to-r from-purple-700 to-emerald-500 w-[290px] rounded-md cursor-pointer flex"
-             target={"_blank"}
-            href="https://github.com/luizgcl"
+    <Main>
+      <Section
+        id="home"
+        className="justify-between"
+      >
+        <Navbar>
+          <h1 className="default-gradient text-5xl pb-4 mt-2 select-none">{'<luizgcl/>'}</h1>
+        </Navbar>
+        <Container>
+          <div
+            className="w-full py-6 flex flex-col md:flex-row items-center"
           >
-            <span className="flex items-center justify-center px-6 py-2 w-[290px] text-gray-200 bg-gray-700 hover:bg-gradient-to-r">
-              <GithubLogo size={64} />
-              <p className="font-bold">Acesse meu Git Hub</p>
-            </span>
-          </a>
+            <ul className="float-left flex md:flex-col gap-6 ml-3">
+              <li>
+                <a
+                  target={"_blank"}
+                  href="https://github.com/luizgcl"
+                >
+                  <GithubLogo
+                    size={32}
+                    className="text-gray-200"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  target={"_blank"}
+                  href="https://linkedin.com/in/luizgcl"
+                >
+                  <LinkedinLogo
+                    size={32}
+                    className="text-blue-700"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  target={"_blank"}
+                  href="https://instagram.com/luizgcl"
+                >
+                  <InstagramLogo
+                    size={32}
+                    className="text-pink-500"
+                  />
+                </a>
+              </li>
+            </ul>
 
-          <a
-            className="p-1 bg-gradient-to-b from-blue-400 to-blue-600 w-[290px] rounded-md cursor-pointer flex"
-            target={"_blank"}
-            href="https://linkedin.com/in/luizgcl"
+            <div className="flex flex-1 items-center justify-center gap-6 mt-10 md:mt-0">
+              <p className="text-gray-200 flex flex-col order-2 md:order-1">
+                <span className="text-3xl default-gradient w-[180px] mb-2">
+                  Luiz Leme
+                </span>
+                <span className="text-md md:text-xl">
+                  {age} anos,
+                </span>
+                <span className="text-md md:text-xl">
+                  Desenvolvedor Full Stack
+                </span>
+              </p>
+              <Photo 
+                className="order-1 md:order-2"
+              />
+            </div>
+          </div>
+        </Container>
+        <a
+          href="#about-me"
+          className="link-button mb-10"
+        >
+          <ArrowDown
+            size={32}
+          />
+          Veja mais
+        </a>
+      </Section>
+      <Section className="justify-between">
+        <a
+          href="#home"
+          className="link-button mt-20 mb-10 md:mb-20"
+        >
+          <ArrowUp
+            size={32}
+          />
+          Home
+        </a>
+        <Container id="about-me">
+          <div
+            className="flex flex-col md:flex-row gap-5 mx-5 md:mx-24"
           >
-            <span className="flex items-center justify-center px-6 py-2 w-[290px] text-gray-200 bg-gray-700 hover:bg-gradient-to-b">
-              <LinkedinLogo size={64} />
-              <p className="font-bold">Acesse meu Linkedin</p>
+            <span className="d-flex flex-col float-left w-full md:w-1/2">
+              <h2 className="animation-start text-gray-100 text-3xl font-bold">Sobre mim</h2>
+              <p className="text-gray-200 mt-6">
+                <span>
+                  Me chamo Luiz Gustavo, tenho {age} anos, Desenvolvedor Fullstack, atualmente trabalhando na 
+                  {' '}<a target="_blank" className="ml-link" href="https://madelife.com.br">MadeLife</a>.<br/>
+                  Sou apaixonado por tecnologia e programação, desde 14 anos passei a me interessar pela programação começando
+                  com Java, desenvolvendo plugins de Minecraft com conexões ao banco de dados MySQL e MongoDB fui me aperfeiçoando até chegar na programação web, onde me encontro atualmente.<br/>
+                  Possuo experiencia com Angular(2.0+), Laravel, React, NestJS, Docker e Spring.<br/>
+                  Nas horas vagas procuro estudar novas linguagens e aprimorar o que ja sei, atualmente estou estudando Rust e Elixir.
+                </span>
+              </p>
             </span>
-          </a>
-
-          <a
-            className="p-1 bg-gradient-to-r from-yellow-400 to-pink-600 w-full md:w-[290px] rounded-md cursor-pointer flex mb-10 md:mb-0"
-            target={"_blank"}
-            href="https://instagram.com/luizgcl"
-          >
-            
-            <span className="flex items-center justify-center px-6 py-2 w-full md:w-[290px] text-gray-200 bg-gray-700 hover:bg-gradient-to-r">
-              <InstagramLogo size={64} />
-              <p className="font-bold">Acesse meu Instagram</p>
+            <span className="d-flex flex-col float-right w-full md:w-1/2">
+              <h2 className="animation-start text-gray-100 text-3xl font-bold">Conhecimento</h2>
+              <p className="flex flex-col gap-2 mt-6 overflow-auto max-h-[31.25rem] scroll-list">
+                {
+                  skills.map(skill => (
+                    <Skill
+                      key={skill.name}
+                      skillName={skill.name}
+                      progressValue={skill.progress}
+                    >
+                      {skill.logo}
+                    </Skill>
+                  ))
+                }
+              </p>
             </span>
-          </a>
-        </footer>
-      </Container>
-    </Section>
+          </div>
+        </Container>
+        <footer 
+            className="glass w-full flex justify-center items-center gap-2 p-4 mt-10 md:mt-20 text-gray-100">
+            <h2 className="default-gradient text-2xl">{'<luizgcl/>'}</h2>
+            <span>
+              &copy; 
+            </span>
+            <span>{new Date(Date.now()).getFullYear()}</span>
+          </footer>
+      </Section>
+    </Main>
   )
 }
