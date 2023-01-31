@@ -6,7 +6,7 @@ export function Photo(props: {className: string}) {
       {...props}
     >
       <img
-        src='https://i.imgur.com/VV12Gkv_d.png'
+        src='https://i.imgur.com/VV12Gkv_d.png?maxwidth=760&fidelity=grand'
         alt="Autor do site"
         className="rounded-lg my-photo max-w-100 h-auto"
       />
