@@ -16,7 +16,7 @@ export function Home() {
   const skills = Array.from([
     {
       name: "Jira",
-      progress: 80,
+      progress: 85,
       logo: <JiraIcon
         size={64}
         children
@@ -24,7 +24,7 @@ export function Home() {
     },
     {
       name: "Angular",
-      progress: 70,
+      progress: 85,
       logo: <AngularLogo 
         size={64}
         children
@@ -40,23 +40,23 @@ export function Home() {
     },
     {
       name: "NodeJS",
-      progress: 65,
+      progress: 75,
       logo: <NodeIcon
         size={64}
         children
       />
     },
-    {
-      name: "Java",
-      progress: 75,
-      logo: <JavaIcon
-        size={64}
-        children
-      />
-    },
+//     {
+//       name: "Java",
+//       progress: 75,
+//       logo: <JavaIcon
+//         size={64}
+//         children
+//       />
+//     },
     {
       name: "MongoDB",
-      progress: 55,
+      progress: 65,
       logo: <MongoDbIcon
         size={64}
         children
@@ -64,7 +64,7 @@ export function Home() {
     },
     {
       name: "MySQL",
-      progress: 65,
+      progress: 85,
       logo: <MySqlIcon
         size={64}
         children
