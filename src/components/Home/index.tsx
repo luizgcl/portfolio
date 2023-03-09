@@ -40,7 +40,7 @@ export function Home() {
     },
     {
       name: "NodeJS",
-      progress: 75,
+      progress: 85,
       logo: <NodeIcon
         size={64}
         children
