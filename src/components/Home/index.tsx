@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Main, Navbar, Section } from "../../@global/styles";
-import { GithubLogo, LinkedinLogo, InstagramLogo, ArrowDown, ArrowUp, AngularLogo, StackOverflowLogo } from 'phosphor-react';
+import { GithubLogo, LinkedinLogo, InstagramLogo, ArrowDown, ArrowUp, AngularLogo, StackOverflowLogo, Calendar } from 'phosphor-react';
 import { Photo } from "../Photo";
 import { ReactIcon } from "../../@global/Icons/ReactIcon";
 import { JiraIcon } from "../../@global/Icons/JiraIcon";
@@ -46,14 +46,14 @@ export function Home() {
         children
       />
     },
-//     {
-//       name: "Java",
-//       progress: 75,
-//       logo: <JavaIcon
-//         size={64}
-//         children
-//       />
-//     },
+    {
+      name: "Java",
+      progress: 75,
+      logo: <JavaIcon
+        size={64}
+        children
+      />
+    },
     {
       name: "MongoDB",
       progress: 65,
@@ -81,7 +81,7 @@ export function Home() {
   ])
 
   const birthTime = new Date(Date.now()).getTime() - new Date(2002, 8, 10).getTime();
-  const age = Math.floor(birthTime / 1000 / 60 / 60 / 24 / 365)
+  const age = Math.floor(birthTime / 1000 / 60 / 60 / 24 / 365);
 
   return (
     <Main>
@@ -127,6 +127,17 @@ export function Home() {
                   <InstagramLogo
                     size={32}
                     className="text-pink-500"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  target={"_blank"}
+                  href="https://calendly.com/luizgcl"
+                >
+                  <Calendar
+                    size={32}
+                    className="text-blue-300"
                   />
                 </a>
               </li>
@@ -178,11 +189,11 @@ export function Home() {
               <h2 className="animation-start text-gray-100 text-3xl font-bold">Sobre mim</h2>
               <p className="text-gray-200 mt-6">
                 <span>
-                  Me chamo Luiz Gustavo, tenho {age} anos, Desenvolvedor Fullstack, atualmente trabalhando na 
+                  Me chamo Luiz Gustavo, tenho {age} anos, Desenvolvedor Full Stack, atualmente trabalhando na 
                   {' '}<a target="_blank" className="ml-link" href="https://madelife.com.br">MadeLife</a>.<br/>
                   Sou apaixonado por tecnologia e programação, desde 14 anos passei a me interessar pela programação começando
-                  com Java, desenvolvendo plugins de Minecraft com conexões ao banco de dados MySQL e MongoDB fui me aperfeiçoando até chegar na programação web, onde me encontro atualmente.<br/>
-                  Possuo experiencia com Angular(2.0+), Laravel, React, NestJS, Docker e Spring.<br/>
+                  com Java, desenvolvendo plugins de Minecraft com conexões ao banco de dados MySQL e MongoDB fui me aperfeiçoando até chegar na programação web, onde trabalho atualmente.<br/>
+                  Possuo experiencia com Angular(2.0+), Laravel, React, NodeJS, NestJS, Docker e Spring.<br/>
                   Nas horas vagas procuro estudar novas linguagens e aprimorar o que ja sei, atualmente estou estudando Rust e Elixir.
                 </span>
               </p>
